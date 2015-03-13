@@ -20,14 +20,18 @@ b(name=null, position=null, color=null, size=null)
 	if size
 		background-size size
 
-border-dashed(color=rgba(0,0,0,1), top=20px, size=12px)
+border-dashed(color=rgba(0,0,0,1), top=calc(100% - 2px), size=12px)
 	background-image: linear-gradient(left, color 70%, transparent 70%)
 	background-repeat: repeat-x;
 	background-size: size 1px;
 	background-position: 0 top;
+	&:hover
+		text-decoration: none
 
-border-line(color=rgba(0,0,0,1), top=20px, size=12px)
+border-line(color=rgba(0,0,0,1), top=calc(100% - 2px), size=12px)
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, color 50%);
 	background-repeat: repeat-x;
 	background-size: 2px 2px;
 	background-position: 0 top;
+	&:hover
+		text-decoration: none
